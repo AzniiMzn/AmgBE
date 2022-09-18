@@ -147,7 +147,7 @@ function main() : void{
 		$build = 0;
 	}
 	foreach(buildPhar(
-		$opts["out"] ?? getcwd() . DIRECTORY_SEPARATOR . "BetterAltay.phar",
+		$opts["out"] ?? getcwd() . DIRECTORY_SEPARATOR . "MinefunCore.phar",
 		dirname(__DIR__) . DIRECTORY_SEPARATOR,
 		[
 			'src',
