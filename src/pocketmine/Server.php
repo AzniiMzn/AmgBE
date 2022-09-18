@@ -1417,25 +1417,25 @@ class Server{
 			}
 			$this->config = new Config($this->dataPath . "pocketmine.yml", Config::YAML, []);
 
-			$this->logger->info("Loading betteraltay.yml...");
-			if(!file_exists($this->dataPath . "betteraltay.yml")){
-				$content = file_get_contents(\pocketmine\RESOURCE_PATH . "betteraltay.yml");
-				@file_put_contents($this->dataPath . "betteraltay.yml", $content);
+			$this->logger->info("Loading minefun.yml...");
+			if(!file_exists($this->dataPath . "minefun.yml")){
+				$content = file_get_contents(\pocketmine\RESOURCE_PATH . "minefun.yml");
+				@file_put_contents($this->dataPath . "minefun.yml", $content);
 			}
-			$this->betteraltayConfig = new Config($this->dataPath . "betteraltay.yml", Config::YAML, []);
+			$this->betteraltayConfig = new Config($this->dataPath . "minefun.yml", Config::YAML, []);
 			$this->loadBetteraltayConfig();
 
-			$this->logger->info("Loading altay.yml...");
-			if(!file_exists($this->dataPath . "altay.yml")){
-				$content = file_get_contents(\pocketmine\RESOURCE_PATH . "altay.yml");
-				@file_put_contents($this->dataPath . "altay.yml", $content);
+			$this->logger->info("Loading minefuncore.yml...");
+			if(!file_exists($this->dataPath . "minefuncore.yml")){
+				$content = file_get_contents(\pocketmine\RESOURCE_PATH . "minefuncore.yml");
+				@file_put_contents($this->dataPath . "minefuncore.yml", $content);
 			}
-			$this->altayConfig = new Config($this->dataPath . "altay.yml", Config::YAML, []);
+			$this->altayConfig = new Config($this->dataPath . "minefuncore.yml", Config::YAML, []);
 			$this->loadAltayConfig();
 
 			$this->logger->info("Loading server properties...");
 			$this->properties = new Config($this->dataPath . "server.properties", Config::PROPERTIES, [
-				"motd" => \pocketmine\NAME . " Server",
+				"motd" => Minefun Network,
 				"server-port" => 19132,
 				"white-list" => false,
 				"announce-player-achievements" => true,
