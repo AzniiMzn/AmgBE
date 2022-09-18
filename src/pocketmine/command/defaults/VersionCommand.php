@@ -54,7 +54,10 @@ class VersionCommand extends VanillaCommand{
 		}
 
 		if(count($args) === 0){
-			$sender->sendMessage("This server is running " . $sender->getServer()->getName() . " " . $sender->getServer()->getBetterAltayVersion() . " based on PocketMine-MP " . $sender->getServer()->getPocketMineVersion() . " for Minecraft: Bedrock Edition " . $sender->getServer()->getVersion() . " (protocol version " . ProtocolInfo::CURRENT_PROTOCOL . ")");
+			$sender->sendMessage("§rThis server is running §6Minefun§fCore v4.1.0");
+			$sender->sendMessage("§rServer: §aplay.minefunmc.xyz:19132");
+			$sender->sendMessage("§rWebsite: §awww.minefunmc.xyz");
+			$sender->sendMessage("§r© §6Minefun §fNetwork §a2021 - 2022");
 			/*$sender->sendMessage(new TranslationContainer("pocketmine.server.info.extended", [
 				$sender->getServer()->getName(),
 				$sender->getServer()->getBetterAltayVersion(),
